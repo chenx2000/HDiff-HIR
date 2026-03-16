@@ -7,7 +7,6 @@ os.environ["CUDA_VISIBLE_DEVICES"] = opt.gpu_id
 import torch
 import numpy as np
 import scipy.io as sio
-import torch.nn.functional as F
 
 from models import model_generator
 from diffusion import create_diffusion
@@ -21,9 +20,9 @@ torch.manual_seed(seed)
 # ===================================================================
 
 # Paths
-data_path = "/home/students/master/2022/chenx/datasets/TSA_real_data/Measurements/"
-mask_path = "/home/students/master/2022/chenx/datasets/TSA_real_data/mask.mat"
-save_path = './real/test/result/'
+data_path = '../../datasets/TSA_real_data/Measurements/'
+mask_path = opt.mask_path
+save_path = './real/result/'
 
 # Pretrained model
 pretrained_model_path = None  # Set this to the checkpoint path
