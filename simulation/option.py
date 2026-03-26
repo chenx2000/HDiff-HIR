@@ -3,7 +3,7 @@ import argparse
 parser = argparse.ArgumentParser(description="HDiff-HIR (Simulation)")
 
 # Hardware specifications
-parser.add_argument("--gpu_id", type=str, default='4')
+parser.add_argument("--gpu_id", type=str, default='0')
 
 # Output directory
 parser.add_argument('--outf', type=str, default='./exp/test/', help='saving_path')
